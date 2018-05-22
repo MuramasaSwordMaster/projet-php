@@ -1,16 +1,5 @@
-var el = $(`<div class='options'>
-<ul>
-<li>
-<a href="../public/mon-compte/generaux" >Mon compte</a>
-</li>
-<li>
-<a href="../public/mes-messages">Mes messages</a>
-</li>
-<li>
-<a href="../public/administration">Administration</a>
-</li>
-</ul>
-</div>`)
+
+var el  = $('#nav-links')
 el.css({
     'display':'none',
     'position':'fixed',

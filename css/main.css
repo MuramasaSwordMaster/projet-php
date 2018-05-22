@@ -72,29 +72,29 @@
     }
     
     
-    .options{
+    #nav-links{
     
         border-radius: 4px;
         
     }
     
-    .options{
+    #nav-links{
      
      border:2px solid #eee;
     
     }
     
-    .options ul {
+    #nav-links ul {
         list-style: none;
       padding:5px;
       margin:0;
     }
     
-    .options ul li{
+    #nav-links ul li{
         padding:4px;
     }
     
-    .options ul li:hover{
+    #nav-links ul li:hover{
        background-color:#eee;
        cursor:pointer;
     }
@@ -123,7 +123,7 @@
     
     }
     
-    .options a {
+    #nav-links a {
         color : black;
     }
 

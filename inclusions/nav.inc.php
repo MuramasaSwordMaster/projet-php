@@ -21,6 +21,21 @@
                 </div>
             </div>
           </nav>
+
+
+          <div id='nav-links'>
+<ul>
+<li>
+<a href="<?php echo $rootPath; ?>mon-espace/compte.php" >Mon compte</a>
+</li>
+<li>
+<a href="<?php echo $rootPath; ?>mon-espace/message.php">Mes messages</a>
+</li>
+<li>
+<a href="<?php echo $rootPath; ?>mon-espace/administration/">Administration</a>
+</li>
+</ul>
+</div>
         
             
            

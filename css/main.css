@@ -1,0 +1,135 @@
+#conteneur-image-sidebar{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    }
+    .photo-profil-sidebar{
+    border-radius: 100%;
+    border:5px solid #eee;
+    margin:auto;
+    width: 60%;
+    height: auto;
+    }
+    .nom-sidebar{
+      text-align: center;
+      padding-top:10px;
+    }
+    .nav-principale{
+    
+    }
+    #nav-principale{
+      padding:20px;
+    }
+    #photo-profil-nav-principale{
+      border-radius : 100%;
+      width:52px;
+      height: auto;
+      margin-left:10px;
+    }
+    #nom-nav-principale{
+        cursor: pointer;
+      font-weight: bold;
+      margin-left:20px;
+      color:white;
+      margin-right: 80px;
+    }
+    .cacher{
+      display: none;
+    }
+    *{
+      font-size: 1em;
+    }
+    
+    .btn-light{
+        color:#17a2b8;
+        font-size:bold;
+    }
+    
+    
+    
+    
+    .search-container input{
+    
+        border-radius: 20px 0 0 20px;
+        border:none;
+        width:300px;
+        height: 26px;
+        margin-left:20px;
+    }
+    
+    .search-container button{
+    
+            border-radius: 0 20px 20px 0;
+            border:none;
+            background : white;
+            height: 26px;
+            color:#17a2b8;
+    
+    }
+    .search-container button:hover{
+        cursor:pointer;
+    }
+    
+    
+    .options{
+    
+        border-radius: 4px;
+        
+    }
+    
+    .options{
+     
+     border:2px solid #eee;
+    
+    }
+    
+    .options ul {
+        list-style: none;
+      padding:5px;
+      margin:0;
+    }
+    
+    .options ul li{
+        padding:4px;
+    }
+    
+    .options ul li:hover{
+       background-color:#eee;
+       cursor:pointer;
+    }
+    body{
+        background-color:#eee;
+    }
+    .espaceur{
+        
+        margin-top:20px;
+        border-radius:4px;
+        padding:40px;
+        background-color:white;
+    }
+    
+    .espaceur h1{
+    
+        margin-bottom:40px;
+        font-size:2em;
+        text-align:center;
+    }
+    
+    #corps-conteneur{
+    
+    padding-left : 20px;
+    padding-right : 20px;
+    
+    }
+    
+    .options a {
+        color : black;
+    }
+
+
+
+    .conteneur-card{
+        padding:20px;
+
+    }

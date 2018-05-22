@@ -11,7 +11,7 @@
                           </div>
                         <div id="nom-nav-principale">
                                     Bonjour William Pasco
-                                    <img id="photo-profil-nav-principale" src="ressources/img/william.jpg">
+                                    <img id="photo-profil-nav-principale" src="<?php echo $rootPath; ?>ressources/img/william.jpg">
                         </div>
                  <div class="nav-item  " style="position :absolute; right:180px;">
                      <a href="./connexion" class="btn btn-light">Se connecter</a>

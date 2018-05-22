@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Accueil reseau</title>
     <?php 
+     include('inclusions/config.inc.php');
  include('inclusions/head-content.inc.php');
  ?>
 

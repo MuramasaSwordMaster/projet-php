@@ -43,14 +43,9 @@ $(document).click(function(e){
         clique = false
     }
 })
-
    el.find('li').click(function(e){
  
-
  $(this).find('a').click()
-
-
-
 
 })
 

@@ -1,3 +1,7 @@
+
+alert('coucou 2')
+
+
 var el = $(`<div class='options'>
 <ul>
 <li>
@@ -53,3 +57,4 @@ $(document).click(function(e){
 
 
 })
+

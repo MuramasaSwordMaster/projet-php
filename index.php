@@ -23,6 +23,8 @@
 
 
 
+
+
 <div id="corps-conteneur">
 
 
@@ -36,5 +38,10 @@
 </div>
 </div>
 
+
+ <?php 
+ 
+ include('inclusions/js.inc.php');
+ ?>
 </body>
 </html>

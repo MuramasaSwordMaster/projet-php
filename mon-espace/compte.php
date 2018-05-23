@@ -59,24 +59,24 @@
                           Paramètre généraux
                         </div>
                        <div class="card-body">
-<form action="#">
+<form action="./compte.php?rubrique=generaux" method="get">
         <div class="form-group">
         <div class="row">
                 <div class="col-6">
-                <input type="text" class="form-control" placeholder="salwa">
+                <input name="prenom" type="text" class="form-control" placeholder="prenom">
                 </div>
                 <div class="col-6">
-                  <input type="text" class="form-control" placeholder="ansart">
+                  <input name="nom" type="text" class="form-control" placeholder="nom">
                 </div>
               </div>
         </div>
-        <div class="form-group">
+        <div class="form-group" >
               <div class="row">
                     <div class="col-6">
-                      <input type="text" class="form-control" placeholder="salwa.ansart@gmail.com">
+                      <input name="mail" type="text" class="form-control" placeholder="mail">
                     </div>
                     <div class="col-6">
-                      <input type="text" class="form-control" placeholder="0678394738">
+                      <input name="num"  type="text" class="form-control" placeholder="num">
                     </div>
                    
                   </div>
@@ -84,7 +84,7 @@
                 <div class="form-group">
                         <div class="row">
                               <div class="col-6">
-                                <input type="text" class="form-control" placeholder="Adresse physique">
+                                <input name="adresse" type="text" class="form-control" placeholder="Adresse">
                               </div>
                               <div class="col-6">
                                 <input type="date" class="form-control">
@@ -92,7 +92,7 @@
                              
                             </div>
                           </div>
-                                <input type="submit" class="btn btn-primary" placeholder="ansart">
+                                <input type="submit" class="btn btn-primary" placeholder="nom">
 </form>
                        </div>
                       </div>
@@ -122,7 +122,7 @@
               
               </div>
         </div>
-          <input type="submit" class="btn btn-primary" placeholder="ansart">
+          <input type="submit" class="btn btn-primary" placeholder="nom">
 </form>
                        </div>
                       </div>

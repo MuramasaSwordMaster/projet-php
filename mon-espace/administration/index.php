@@ -77,10 +77,8 @@ margin-top:10px;
     <div id="collapseOne" class="collapse show" data-parent="#accordion">
       <div class="card-body">
         <ul class="list-group ">
-                <li class="list-group-item"><a href="generaux">Apprentissage</a></li>
-                <li class="list-group-item"><a href="a-propos">Classiques</a></li>
-            
-        
+                <li class="list-group-item"><a href="generaux" href='../administration/index.php?annee=master2&amp;mode=apprentissage'>Apprentissage</a></li>
+                <li class="list-group-item"><a href="a-propos" href='../administration/index.php?annee=master2&amp;mode=classique'>Classiques</a></li>
                 </ul>
         
       </div>
@@ -89,18 +87,20 @@ margin-top:10px;
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" >
+      <a class="collapsed card-link" data-toggle="collapse" href='../administration/index.php?annee=master1'>
         Master 1
       </a>
       <a style='float:right;' class="toggle-link collapsed" data-toggle="collapse" href="#collapseTwo" data-title="Déplier l'offre" style="color:#fff;background-color:#ED595B;" aria-expanded="false" aria-controls="collapseOne">
            <span class="fa fa-chevron-down"></span>
            </a>
     </div>
+    
+    
     <div id="collapseTwo" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <ul class="list-group ">
-                <li class="list-group-item"><a href="generaux">Apprentissage</a></li>
-                <li class="list-group-item"><a href="a-propos">Classiques</a></li>
+                <li class="list-group-item"><a href="generaux" href='../administration/index.php?annee=master2&amp;mode=apprentissage'>Apprentissage</a></li>
+                <li class="list-group-item"><a href="a-propos" href='../administration/index.php?annee=master2&amp;mode=classique'>Classiques</a></li>
             
         
                 </ul>
@@ -120,8 +120,8 @@ margin-top:10px;
     <div id="collapseThree" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <ul class="list-group ">
-                <li class="list-group-item"><a href="generaux">Apprentissage</a></li>
-                <li class="list-group-item"><a href="a-propos">Classiques</a></li>
+                <li class="list-group-item"><a href="generaux" href='../administration/index.php?annee=master2&amp;mode=apprentissage'>Apprentissage</a></li>
+                <li class="list-group-item"><a href="a-propos" href='../administration/index.php?annee=master2&amp;mode=classique'>Classiques</a></li>
         </ul>
       </div>
     </div>

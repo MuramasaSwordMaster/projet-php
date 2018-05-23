@@ -4,8 +4,6 @@ include('../../inclusions/db.inc.php') ;
 
 $db = getDB('../../db/');
 
-
-
 $query = "select * FROM Etudie";
 echo "here";
 

@@ -8,8 +8,6 @@ var_dump($_GET['ids']);
 
 $liste  = json_decode($_GET['ids']);
 
-
-
 var $anciensMiagistes = $db->query(''.$_GET['ids']);
 
 

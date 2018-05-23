@@ -13,7 +13,7 @@ el.css({
 
 $('body').append(el)
 var clique = false
-$("#nom-nav-principale").click(function(e){
+$("#nav-nom").click(function(e){
     if(!clique){
     clique = true
     var th = $(this)

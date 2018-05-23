@@ -30,9 +30,7 @@
     #nom-nav-principale{
         cursor: pointer;
       font-weight: bold;
-      margin-left:20px;
-      color:white;
-      margin-right: 80px;
+    
     }
     .cacher{
       display: none;

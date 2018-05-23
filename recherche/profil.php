@@ -38,7 +38,6 @@ include('../inclusions/db.inc.php') ;
                         <div class="espaceur">
 
 
-
                             <?php
 
 
@@ -71,16 +70,14 @@ include('../inclusions/db.inc.php') ;
                             ?>
 
 
-              
+
                         </div>
-                        
                     </div>
     
             </div>
-            
         </div>
     </div>
-    
+
 
     <?php 
         include('../inclusions/js.inc.php');

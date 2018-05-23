@@ -9,13 +9,8 @@
      include('../../inclusions/config.inc.php');
  include('../../inclusions/head-content.inc.php');
  
-
+ $liste = $_GET['ids'];
  ?>
- 
- <script type="text/javascript">
-   var liste  = <?php echo  $_GET['ids']; ?>
-   liste = JSON.stringify(liste)
- </script>
 
 <style media="screen">
   select{
@@ -32,8 +27,6 @@
  
  include('../../inclusions/nav.inc.php');
  
- 
-
 
  
  ?>
@@ -69,15 +62,15 @@
                                 
                                 <tr>
                                   <td>
-                                    <select id='filiere' class="" name="Niliere">
-                                    <option value="Etudiant">Etudiant</option>
+                                    <select class="" name="Filiere">
+                                    <option value="MIAGE">MIAGE</option>
                                       <option value="AncienMiagiste">Ancien Miagiste</option>
                                     
                                   </select>
                                 
                                 </td>
                                   <td>
-                                    <select id='niveau' class="" name="Niveau">
+                                    <select class="" name="Niveau">
                                         <option value="vide">-</option>
                                        <option value="L3">Licence 3</option>
                                        <option value="M1">MASTER 1</option>
@@ -90,7 +83,7 @@
                                   </td>
                                   <td>
                                     
-                                    <select id='statut' class="" name="Statut">
+                                    <select class="" name="Statut">
                                         <option value="vide">-</option>
                                        <option value="Apprentissage">Apprentissage</option>
                                        <option value="Classique">Classique</option>
@@ -149,11 +142,8 @@
  
  <script type="text/javascript">
    $('#valider').click(function(e){
-     window.open('traitement/traitement-profil.php?ids='+liste +'&amp;filiere='
-     +$('#filiere').val()+'&amp;niveau='
-    +$('#niveau').val()
-    +'&amp;statut='
-    +$('#statut').val());
+     alert('coucou')
+     window.open('traitement/traitement-profil.php?ids='+ <?php echo $liste ?>);
    })
    
    $('#annuler').click(function(e){

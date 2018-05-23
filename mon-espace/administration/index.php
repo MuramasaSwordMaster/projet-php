@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Accueil reseau</title>
-    
 
     <?php 
 include('../../inclusions/config.inc.php');
@@ -31,6 +30,11 @@ margin-top:10px;
   margin-right:15px;
   
   margin-top:10px;
+  
+}
+
+.list-group{
+  
   
 }
 
@@ -109,7 +113,7 @@ margin-top:10px;
         <ul class="list-group ">
                 <li class="list-group-item"><a href="generaux">Apprentissage</a></li>
                 <li class="list-group-item"><a href="a-propos">Classiques</a></li>
-                </ul>
+        </ul>
       </div>
     </div>
   </div>

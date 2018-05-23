@@ -9,8 +9,13 @@
      include('../../inclusions/config.inc.php');
  include('../../inclusions/head-content.inc.php');
  
- $liste = $_GET['ids'];
+
  ?>
+ 
+ <script type="text/javascript">
+   var liste  = <?php echo  $_GET['ids']; ?>
+   liste = JSON.stringify(liste)
+ </script>
 
 <style media="screen">
   select{
@@ -27,6 +32,8 @@
  
  include('../../inclusions/nav.inc.php');
  
+ 
+
 
  
  ?>
@@ -142,7 +149,7 @@
  
  <script type="text/javascript">
    $('#valider').click(function(e){
-     window.open('traitement/traitement-profil.php?ids='+ <?php echo $liste ?>+'&amp;filiere='
+     window.open('traitement/traitement-profil.php?ids='+liste +'&amp;filiere='
      +$('#filiere').val()+'&amp;niveau='
     +$('#niveau').val()
     +'&amp;statut='

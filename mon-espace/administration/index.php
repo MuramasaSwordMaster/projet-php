@@ -138,47 +138,66 @@ include('../../inclusions/head-content.inc.php');
                        <div class="card-body">
                          
                          <form class="" action="index.html" method="post">
-                           <table class="table">
-                             <thead>
-                               <tr>
-                                 <th scope="col"><input type="checkbox"  id='tout-cocher' title='Tout Cocher'></th>
-                                 <th scope="col">Nom</th>
-                                 <th scope="col">Prénom</th>
-                                 <th scope="col">Filière</th>
-                                 <th scope="col">Niveau</th>
-                                 <th scope="col">Statut</th>
-                               </tr>
-                             </thead>
-                             <tbody>
+                        
                                
                                
                                <?php 
-                               
-                                include('generer-tab.php');
-                               
-                                   
-                                ?>
-                            
-                            
-                             </tbody>
-                           </table>
-                           
-                           <button id="exporter-profils" type="button" class="btn btn-primary">
-                             Exporter (CSV)
+                               if(isset($_GET['rubrique'])){
+                                 
+                                 ?>
+                                 
+                                 <table class="table">
+                                   <thead>
+                                     <tr>
+                                       <th scope="col"><input type="checkbox"  id='tout-cocher' title='Tout Cocher'></th>
+                                       <th scope="col">Nom</th>
+                                       <th scope="col">Prénom</th>
+                                       <th scope="col">Filière</th>
+                                       <th scope="col">Niveau</th>
+                                       <th scope="col">Statut</th>
+                                     </tr>
+                                   </thead>
+                                   <tbody>
+                                 
+                                 <?php
+                                 include('generer-tab.php');
+                                 
+                              ?>
+                              
+                              
+                              
+                               </tbody>
+                             </table>
                              
-                           </button>  
+                             <button id="exporter-profils" type="button" class="btn btn-primary">
+                               Exporter (CSV)
+                               
+                             </button>  
+  
+  
+                          <button  data-toggle='modal' data-target='#modal-message' type="button" class="btn btn-primary">
+                            Envoyer un message
+                            
+                          </button>
+  
+                          <button id="modifier-profils" type="button" class="btn btn-primary">
+                            Modifier les profils
+                          </button>  
 
-
-                        <button  data-toggle='modal' data-target='#modal-message' type="button" class="btn btn-primary">
-                          Envoyer un message
-                          
-                        </button>
-
-                        <button id="modifier-profils" type="button" class="btn btn-primary">
-                          Modifier les profils
-                          
-                        </button>  
-                    
+                              <?php 
+                               }
+                               else{
+                                ?>
+                                <h3 style='text-align:center;font-size:1.7em;color:#999;'>Selectionnez une filière à droite</h3>
+                                <?php 
+                              }
+                                 ?>
+                               
+                            
+                               
+                              
+                            
+                        
                          </form>
           
                        </div>

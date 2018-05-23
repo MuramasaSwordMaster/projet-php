@@ -2,6 +2,7 @@
 
 include('../inclusions/db.inc.php') ; 
 
+
 ?>
 
 <!DOCTYPE html>
@@ -49,8 +50,6 @@ if(isset($_POST["query"]) && !empty($_POST["query"])){
 	// EXEC query and browse results
 	$result = $db->query($query);
 	while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-
-
 
 		//LIST results
 		echo "<li><a href=\"$rootPath/recherche/profil.php?id=".$row["Id_Pers"]."\">" . $row["Nom"] . ' '  .$row["Prenom"] . "</a></li>";

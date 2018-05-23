@@ -18,7 +18,6 @@ background-color : #fff;
 border: 1px solid #17a2b8;
 float: right;
 margin-right:15px;
-
 margin-top:10px;
 }
 
@@ -28,13 +27,12 @@ margin-top:10px;
   border: 1px solid #17a2b8;
   float: right;
   margin-right:15px;
-  
   margin-top:10px;
-  
 }
 
-.list-group{
-  
+.list-group li{
+  border-left : none;
+  border-right : none;
   
 }
 
@@ -67,8 +65,13 @@ margin-top:10px;
 
   <div class="card">
     <div class="card-header">
-      <a class="card-link" data-toggle="collapse" href="#collapseOne">
+      
+      <a class="card-link" href="#" >
         Licence 3
+      </a>
+      
+      <a style='float:right;' class="toggle-link collapsed" data-toggle="collapse" href="#collapseOne" data-title="Déplier l'offre" style="color:#fff;background-color:#ED595B;" aria-expanded="false" aria-controls="collapseOne">
+           <span class="fa fa-chevron-down"></span>
       </a>
     </div>
     <div id="collapseOne" class="collapse show" data-parent="#accordion">
@@ -86,9 +89,12 @@ margin-top:10px;
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+      <a class="collapsed card-link" data-toggle="collapse" >
         Master 1
       </a>
+      <a style='float:right;' class="toggle-link collapsed" data-toggle="collapse" href="#collapseTwo" data-title="Déplier l'offre" style="color:#fff;background-color:#ED595B;" aria-expanded="false" aria-controls="collapseOne">
+           <span class="fa fa-chevron-down"></span>
+           </a>
     </div>
     <div id="collapseTwo" class="collapse" data-parent="#accordion">
       <div class="card-body">
@@ -104,9 +110,12 @@ margin-top:10px;
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+      <a class="card-link" href='../administration/index.php?annee=master2' >
         Master 2
       </a>
+      <a style='float:right;' class="toggle-link collapsed" data-toggle="collapse" href="#collapseThree" data-title="Déplier l'offre" style="color:#fff;background-color:#ED595B;" aria-expanded="false" aria-controls="collapseOne">
+           <span class="fa fa-chevron-down"></span>
+           </a>
     </div>
     <div id="collapseThree" class="collapse" data-parent="#accordion">
       <div class="card-body">

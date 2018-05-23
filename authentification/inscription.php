@@ -21,7 +21,7 @@
     var cbStatut = document.getElementById("cbStatut");
     var divNiveaux = document.getElementById("divNiveaux");
     divNiveaux.style.display  = 'none';   
-    if (cbStatut.options[cbStatut.selectedIndex].value == 2)
+    if (cbStatut.options[cbStatut.selectedIndex].value == "Etudiant")
         divNiveaux.style.display  = 'block';
     else
         divNiveaux.style.display  = 'none';        
@@ -57,8 +57,8 @@
                         <div class="form-group">                        
                             <select id="cbStatut" name="statut" onchange="cbStatutChange()" class="form-control input-lg">
                                 <option selected="selected" value="0">Vous êtes ?</option>
-								<option value="1">Enseignant</option>
-                                <option value="2">Etudiant</option>
+								<option value="Enseignant">Enseignant</option>
+                                <option value="Etudiant">Etudiant</option>
                             </select>
                         </div>
                         <div class="form-group" id="divNiveaux">

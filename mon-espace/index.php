@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Accueil reseau</title>
     <?php 
-     include('inclusions/config.inc.php');
- include('inclusions/head-content.inc.php');
+     include('../inclusions/config.inc.php');
+ include('../inclusions/head-content.inc.php');
  ?>
 
 </head>
@@ -17,7 +17,7 @@
 
  <?php 
  
- include('inclusions/nav.inc.php');
+ include('../inclusions/nav.inc.php');
  
  ?>
 
@@ -43,7 +43,7 @@
 
  <?php 
  
- include('inclusions/js.inc.php');
+ include('../inclusions/js.inc.php');
  ?>
 </body>
 </html>

@@ -14,8 +14,9 @@ $passe = $_POST['passe'];
 $email = $_POST['email'];
 $dateNaiss = $_POST['dateNaiss'];
 $adresse = $_POST['adresse'];
-/*$niveau = $_POST['niveau'];
 $mode = $_POST['mode'];
+/*$niveau = $_POST['niveau'];
+
 $statut = $_POST['statut'];*/
 
 
@@ -30,7 +31,7 @@ $statut = $_POST['statut'];*/
     END;");*/
   /*  $db->exec("INSERT INTO Etudie(Id_Pers, Annee, Note, Niveau, Mode, Num_interne) 
         VALUES (99, '2018', null, '$niveau', '$mode', '$num');");*/
-
+   echo($mode) ; 
   
 }
 ?>

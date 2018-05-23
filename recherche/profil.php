@@ -1,3 +1,14 @@
+<?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
+include('../inclusions/db.inc.php') ; 
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +36,40 @@
 
                     <div class="container-fluid">
                         <div class="espaceur">
+
+
+                            <?php
+
+
+                            // CHECK query parmeter
+                            if(isset($_GET["id"]) && !empty($_GET["id"])){
+
+                                // INIT
+                                $db = getDB('../db/');
+                                $id = $_GET["id"];
+                                $output = array();
+
+                                // BUILD QUery
+                                $query = "select * FROM Personne WHERE Id_Pers == '$id'";
+                                
+
+                                // EXEC query and browse results
+                                $result = $db->query($query);
+                                $row = $result->fetchArray(SQLITE3_ASSOC);
+
+                                    foreach($row as $key=>$value){
+                                         echo "<span style='font-weight:bold'>$key</span> : $value <br />" ;
+                                    }
+                                    
+                                
+                                
+
+                            }
+
+
+                            ?>
+
+
 
                         </div>
                     </div>

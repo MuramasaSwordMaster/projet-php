@@ -16,9 +16,9 @@
 </a>
 </li>
 <li class="nav-item" style='padding-left:20px; padding-top: 15px;'>
-  <form class="form-inline nav-item">
-  <input class="form-control mr-sm-2" type="search" placeholder="Rechercher un ami" aria-label="Rechercher un ami">
-  <button class="btn btn-light" type="submit">Rechercher</button>
+  <form  class="form-inline nav-item" method="post" action="<?php echo $rootPath; ?>recherche/resultat-recherche.php">
+    <input placeholder="Rechercher un ami" aria-label="Rechercher un ami" id="search-box" name="query">
+    <button class="btn btn-light" type="submit">Rechercher</button>
   </form>
 </li>
 </ul>

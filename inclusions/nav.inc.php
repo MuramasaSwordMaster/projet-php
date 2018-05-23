@@ -26,13 +26,19 @@
 <ul class='navbar-nav'>
   <li class="nav-item">
 
-           <a href="./connexion" class="btn btn-light">Se connecter</a>
+           <a href="<?php echo $rootPath; ?>authentification/connexion.php" class="btn btn-light" >Se connecter</a>
   
   
   </li>
   <li class="nav-item" style='padding-left:20px;'>
 
-        <a href="#" class="btn btn-light">Se déconnecter</a>
+        <a href="<?php echo $rootPath; ?>authentification/inscription.php" class="btn btn-light">Inscription</a>
+
+  </li>
+  
+  <li class="nav-item" style='padding-left:20px;'>
+
+        <a href="<?php echo $rootPath; ?>authentification/deconnexion.php" class="btn btn-light">Se déconnecter</a>
 
   </li>
 </ul>

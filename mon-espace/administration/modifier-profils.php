@@ -21,12 +21,6 @@
  
  ?>
 
-
-
-
-
-
-
 <div id="corps-conteneur">
 
 
@@ -63,10 +57,6 @@
                     <label for="">Mot de passe courrant</label>
                 <input type="text" class="form-control" placeholder="Mot de passe">
                 </div>
-               
-               
-             
-               
                 <div class="col-6">
                     <label for="">Nouveau mot de passe :</label>
                   <input type="text" class="form-control" placeholder="Nouveau mot de passe">

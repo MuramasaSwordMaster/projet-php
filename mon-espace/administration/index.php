@@ -180,16 +180,7 @@ margin-top:10px;
                                
                                    
                                 ?>
-                               <tr>
-                                 
-                              
-                                   <td><input type="checkbox" data-id='1' ></td>
-                                 <td>Lourou</td>
-                                 <td>Mohamed</td>
-                                 <td>Miage</td>
-                                  <td>L3</td>
-                                  <td>Apprenti</td>
-                               </tr>
+                            
                                <tr>
                               
                                    <td><input type="checkbox" data-id='2'></td>

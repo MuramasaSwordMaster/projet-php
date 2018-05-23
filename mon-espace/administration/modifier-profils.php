@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>mon compte</title>
+    <title>Modifier les profils</title>
     <?php 
-     include('../inclusions/config.inc.php');
- include('../inclusions/head-content.inc.php');
+     include('../../inclusions/config.inc.php');
+ include('../../inclusions/head-content.inc.php');
+ 
+ $liste = $_GET['ids'];
  ?>
 
+<style media="screen">
+  select{
+    
+    width : 100%;
+  }
+</style>
 </head>
 <body>
 <div id="wrapper">
@@ -18,6 +26,8 @@
  <?php 
  
  include('../../inclusions/nav.inc.php');
+ 
+
  
  ?>
 
@@ -29,7 +39,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-12">
+        <div class="offset-md-2 col-md-8">
                 <div class="card" style="width: 100%;">
                         <div class="card-header">
                           Modififications des profils
@@ -40,12 +50,68 @@
                         <div class="">
                           
                           <form class="" action="index.html" method="post">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Filière</th>
+                                  <th scope="col">Niveau</th>
+                                  <th scope="col">Statut</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                
+                                <tr>
+                                  <td>
+                                    <select class="" name="Filiere">
+                                    <option value="MIAGE">MIAGE</option>
+                                      <option value="AncienMiagiste">Ancien Miagiste</option>
+                                    
+                                  </select>
+                                
+                                </td>
+                                  <td>
+                                    <select class="" name="Niveau">
+                                        <option value="vide">-</option>
+                                       <option value="L3">Licence 3</option>
+                                       <option value="M1">MASTER 1</option>
+                                       <option value="M2">MASTER 2</option>
+                                  </select>
+                                
+                                    
+                                    
+                                    
+                                  </td>
+                                  <td>
+                                    
+                                    <select class="" name="Statut">
+                                        <option value="vide">-</option>
+                                       <option value="Apprentissage">Apprentissage</option>
+                                       <option value="Classique">Classique</option>
+                                  </select>
+                                
+                                    
+                                  </td>
+                                
+                                </tr>
+                                   
+                              </tbody>
+                            </table>
                             
+                            <button id="annuler" type="button" class="btn btn-primary">
+                              Annuler
+                            </button>  
+    
                             
-                            
-                            
-                            
+                            <button id="valider" type="button" class="btn btn-primary">
+                              Valider
+                            </button>  
+                        
+    
+    
+                      
+                     
                           </form>
+           
                           
                         </div>
                     
@@ -71,7 +137,22 @@
 
  <?php 
  
- include('../inclusions/js.inc.php');
+ include('../../inclusions/js.inc.php');
  ?>
+ 
+ <script type="text/javascript">
+   $('#valider').click(function(e){
+     alert('coucou')
+     window.open('traitement/traitement-profil.php?ids='+ <?php echo $liste ?>);
+   })
+   
+   $('#annuler').click(function(e){
+     
+     
+     window.open('./');
+     
+   })
+   
+ </script>
 </body>
 </html>

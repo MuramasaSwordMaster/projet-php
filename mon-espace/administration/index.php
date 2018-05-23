@@ -13,29 +13,7 @@ include('../../inclusions/head-content.inc.php');
  ?>
  <style>
 
-.btn-primary{
-color:#17a2b8;
-background-color : #fff;
-border: 1px solid #17a2b8;
-float: right;
-margin-right:15px;
-margin-top:10px;
-}
 
-.btn-primary:hover{
-  color:#17a2b8;
-  background-color : #fff;
-  border: 1px solid #17a2b8;
-  float: right;
-  margin-right:15px;
-  margin-top:10px;
-}
-
-.list-group li{
-  border-left : none;
-  border-right : none;
-  
-}
 
 </style>
 </head>

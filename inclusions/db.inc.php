@@ -1,10 +1,4 @@
-
 <?php
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 
 /** using the open method to initialize the DB.*/
 class MyDB extends SQLite3
@@ -97,7 +91,7 @@ function importCSV($dossierDB,$csvFile,$withHeader = true){
 }
 
 
-function exportCSV($dossierDB,$csvFile){
+function exportCSV($dossierDB,$csvFile,$request = null){
 
 	// File structure : "Id_Pers";"Nom";"Prenom";"PWD";"Mail";"Date_Naissance";"Adresse";"Pic_scr";"Apropos"
 
@@ -111,7 +105,7 @@ function exportCSV($dossierDB,$csvFile){
 			fputcsv($handle, array("Id_Pers","Nom","Prenom","PWD","Mail","Date_Naissance","Adresse","Pic_src","Apropos"));
 
 			// GET Personnes
-			$query = "select * FROM Personne";
+			$query = (empty($request))?"select * FROM Personne":$request;
 			$result = $db->query($query);
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
 

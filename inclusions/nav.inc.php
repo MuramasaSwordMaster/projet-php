@@ -28,7 +28,6 @@
 
            <a href="<?php echo $rootPath; ?>authentification/connexion.php" class="btn btn-light" >Se connecter</a>
   
-  
   </li>
   <li class="nav-item" style='padding-left:20px;'>
 

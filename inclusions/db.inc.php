@@ -96,4 +96,48 @@ function importCSV($dossierDB,$csvFile,$withHeader = true){
 
 }
 
+
+function exportCSV($dossierDB,$csvFile){
+
+	// File structure : "Id_Pers";"Nom";"Prenom";"PWD";"Mail";"Date_Naissance";"Adresse";"Pic_scr";"Apropos"
+
+	// INIT
+	$db = getDB($dossierDB);
+
+		// OPEN csv
+		if (($handle = fopen($csvFile, "w")) !== FALSE) {
+
+			// PUT Headers
+			fputcsv($handle, array("Id_Pers","Nom","Prenom","PWD","Mail","Date_Naissance","Adresse","Pic_src","Apropos"));
+
+			// GET Personnes
+			$query = "select * FROM Personne";
+			$result = $db->query($query);
+			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+
+				// PUT in CSV
+				fputcsv($handle, array(
+					$row["Id_Pers"],
+					$row["Nom"],
+					$row["Prenom"],
+					$row["PWD"],
+					$row["Mail"],
+					$row["Date_Naissance"],
+					$row["Adresse"],
+					$row["Pic_src"],
+					$row["Apropos"]
+				));
+
+			}
+
+
+			// CLOSE
+			fclose($handle);
+
+		}
+
+
+
+}
+
 ?>

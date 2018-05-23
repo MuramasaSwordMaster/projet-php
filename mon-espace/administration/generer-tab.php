@@ -1,15 +1,24 @@
 <?php
 
+if(isset($_GET['rubrique'])){
+
 include('../../inclusions/db.inc.php') ; 
 
 $db = getDB('../../db/');
 
+if($_GET['rubrique']=='licence3' || $_GET['rubrique']=='master1' || $_GET['rubrique']=='master2'){
 
-
-$query = "select * FROM Etudie";
+$query = "select * FROM Etudie W";
 echo "here";
 
 $result = $db->query($query);
+
+
+
+}
+
+}
+
 
 while ($personne = $result->fetchArray()) {
   
@@ -24,4 +33,5 @@ while ($personne = $result->fetchArray()) {
           <td>Apprenti</td>
        </tr>";
 }
+
 ?>

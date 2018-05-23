@@ -194,18 +194,23 @@ margin-top:10px;
                                
                              </tbody>
                            </table>
-
+                           
+                           <button id="exporter-profils" type="button" class="btn btn-primary">
+                             Exporter (CSV)
+                             
+                           </button>  
 
 
                         <button id="envoyer-message" type="button" class="btn btn-primary">
                           Envoyer un message
                           
                         </button>
-                        
-                                                <button id="modifier-profils" type="button" class="btn btn-primary">
-                                                  Modifier les profils
-                                                  
-                                                </button>  
+
+                        <button id="modifier-profils" type="button" class="btn btn-primary">
+                          Modifier les profils
+                          
+                        </button>  
+                
                         
 
 
@@ -254,6 +259,11 @@ margin-top:10px;
 $('#envoyer-message').click(function(e){
 window.open('traitement-message.php?ids='+JSON.stringify(obtenirIdsSelectionnes()))
 })
+
+$('#exporter-profils').click(function(e){
+window.open('exporter-profils.php?ids='+JSON.stringify(obtenirIdsSelectionnes()))
+})
+
 
 
 $('#modifier-profils').click(function(e){

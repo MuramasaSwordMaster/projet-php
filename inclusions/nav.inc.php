@@ -3,7 +3,7 @@
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
-<a class="navbar-brand" href="#">  Paris Nanterre</a>
+<a class="navbar-brand" href="#">Paris Nanterre</a>
 
 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -70,7 +70,7 @@
           <div id='nav-links'>
 <ul>
 <li>
-<a href="<?php echo $rootPath; ?>mon-espace/compte.php" >Mon compte</a>
+<a href="<?php echo $rootPath; ?>mon-espace/compte.php?rubrique=generaux" >Mon compte</a>
 </li>
 <li>
 <a href="<?php echo $rootPath; ?>mon-espace/message.php">Mes messages</a>

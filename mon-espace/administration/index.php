@@ -88,7 +88,7 @@ margin-top:10px;
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href='../administration/index.php?rubrique=master1'>
+      <a class="collapsed card-link"  href='../administration/index.php?rubrique=master1'>
         Master 1
       </a>
       <a style='float:right;' class="toggle-link collapsed" data-toggle="collapse" href="#collapseTwo" data-title="Déplier l'offre" style="color:#fff;background-color:#ED595B;" aria-expanded="false" aria-controls="collapseOne">
@@ -181,25 +181,7 @@ margin-top:10px;
                                    
                                 ?>
                             
-                               <tr>
-                              
-                                   <td><input type="checkbox" data-id='2'></td>
-                                 <td>Ansart</td>
-                                 <td>Salwa</td>
-                                 <td>Miage</td>
-                                  <td>L3</td>
-                                  <td>Apprenti</td>
-                               </tr>
-                               <tr>
-                              
-                                   <td><input type="checkbox" data-id='3'></td>
-                                 <td>D'auber</td>
-                                 <td>Aurel</td>
-                                 <td>Miage</td>
-                                  <td>L3</td>
-                                  <td>Apprenti</td>
-                               </tr>
-                               
+                            
                              </tbody>
                            </table>
                            
@@ -258,20 +240,6 @@ margin-top:10px;
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
  <?php 

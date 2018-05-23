@@ -10,10 +10,11 @@ class MyDB extends SQLite3
 }
 
 $db = new MyDB();
+$db->exec("INSERT INTO 
+    Personne (Id_Pers,Nom,Prenom,PWD,Mail,Date_Naissance,Adresse,Pic_src,Apropos) 
+    VALUES (1,'TOTO','TITI',1234,'toto@gmail.com',03091995,'Paris','c://','je suis toto')"
+    );
 
-$db->exec('CREATE TABLE foo (bar STRING)');
-$db->exec("INSERT INTO foo (bar) VALUES ('This is a test')");
-
-$result = $db->query('SELECT bar FROM foo');
+$result = $db->query('SELECT * FROM Personne');
 var_dump($result->fetchArray());
 ?>

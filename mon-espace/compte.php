@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Accueil reseau</title>
+    <title>Compte</title>
     <?php 
      include('../inclusions/config.inc.php');
  include('../inclusions/head-content.inc.php');
@@ -35,55 +35,146 @@
                           Paramètres de compte
                         </div>
                         <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><a href="generaux">Généraux</a></li>
-                                <li class="list-group-item"><a href="a-propos">A propos</a></li>
-                                <li class="list-group-item"><a href="confidentialite">Confidentialité</a></li>
-                                <li class="list-group-item"><a href="mot-de-passe">Mot de passe</a></li>
-                                <li class="list-group-item"><a href="avatar">Avatar</a></li>
-                        
-                                </ul>
+                                <li class="list-group-item"><a href="./compte.php?rubrique=generaux">Généraux</a></li>
+                                <li class="list-group-item"><a href="./compte.php?rubrique=a-propos">A propos</a></li>
+                                <li class="list-group-item"><a href="./compte.php?rubrique=avatar">Avatar</a></li>
+                          </ul>
             </div>
         </div>
         <div class="col-md-9">
-                <div class="card" style="width: 100%;">
+          
+          
+          <?php 
+    
+          if(isset($_GET['rubrique'])){
+            
+    
+            if($_GET['rubrique']=='generaux'){
+              
+            
+              ?>
+              
+              <div class="card" style="width: 100%;">
                         <div class="card-header">
-                         Mot de passe
+                          Paramètre généraux
                         </div>
                        <div class="card-body">
-                <form action="#">
-                <div class="form-group">
-                <div class="row">
+<form action="#">
+        <div class="form-group">
+        <div class="row">
                 <div class="col-6">
-                    <label for="">Mot de passe courrant</label>
-                <input type="text" class="form-control" placeholder="Mot de passe">
+                <input type="text" class="form-control" placeholder="salwa">
                 </div>
                 <div class="col-6">
-                    <label for="">Nouveau mot de passe :</label>
-                  <input type="text" class="form-control" placeholder="Nouveau mot de passe">
+                  <input type="text" class="form-control" placeholder="ansart">
                 </div>
-            </div>
+              </div>
         </div>
-       
-        
-            <div class="form-group">
-                    <div class="row">
-                       
-                <div class="offset-6  col-6">
-                        <label for="">Répétez votre mot de passe :</label>
-                      <input type="text" class="form-control" placeholder="Répeter mot de passe">
+        <div class="form-group">
+              <div class="row">
+                    <div class="col-6">
+                      <input type="text" class="form-control" placeholder="salwa.ansart@gmail.com">
                     </div>
-
-                    
-                
+                    <div class="col-6">
+                      <input type="text" class="form-control" placeholder="0678394738">
+                    </div>
+                   
+                  </div>
                 </div>
-                </div>
-     
-                          
-                </form>
+                <div class="form-group">
+                        <div class="row">
+                              <div class="col-6">
+                                <input type="text" class="form-control" placeholder="Adresse physique">
+                              </div>
+                              <div class="col-6">
+                                <input type="date" class="form-control">
+                              </div>
+                             
+                            </div>
+                          </div>
+                                <input type="submit" class="btn btn-primary" placeholder="ansart">
+</form>
                        </div>
-                    
+                      </div>
+              
+              
+              
+              <?php 
+        
+              
+            }
+
+          else if($_GET['rubrique']=='a-propos'){
+            
+            ?>
+            
+            <div class="card" style="width: 100%;">
+                        <div class="card-header">
+                          A propos
+                        </div>
+                       <div class="card-body">
+<form action="#">
+        <div class="form-group">
+        <div class="row">
+                <div class="col-12">
+                <textarea name="name" rows="8" cols="80"></textarea>
                 </div>
-                
+              
+              </div>
+        </div>
+          <input type="submit" class="btn btn-primary" placeholder="ansart">
+</form>
+                       </div>
+                      </div>
+            
+            
+            <?php 
+            
+          }
+          else if($_GET['rubrique'] == 'avatar'){
+              ?>
+              <div class="card" style="width: 100%;">
+                          <div class="card-header">
+                            A propos
+                          </div>
+                         <div class="card-body">
+  <form action="#">
+          <div class="form-group">
+          <div class="row">
+                  <div class="col-12">
+                    <label for="fichier">
+                      
+                      Choisir un fichier
+                    </label>
+                    <input type="file" name="" value="">
+                  
+                  </div>
+            
+                </div>
+          </div>
+                <input type="submit" class="btn btn-primary" >
+        
+  </form>
+                         </div>
+                        </div>
+              
+            
+              <?php 
+              
+            }
+          }
+        
+          
+          
+          
+          
+          
+  
+           ?>
+          
+          
+        
+          
    
         </div>
     </div>

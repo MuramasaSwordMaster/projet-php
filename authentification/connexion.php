@@ -1,19 +1,37 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Standard Meta -->
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Accueil reseau</title>
+    <?php 
+     include('../inclusions/config.inc.php');
+     include('../inclusions/head-content.inc.php');
+ ?>
 
-    <!-- Site Properties -->
-    <title>Login</title>
+<script type="text/javascript">
 
-    <!-- Stylesheets -->
-	   <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+</script>
+
 </head>
 <body>
-        <div class="container">
+<div id="wrapper">
+ <div class="container-fluid">
+
+ <?php 
+ 
+ include('../inclusions/nav.inc.php');
+ 
+ ?>
+
+<div id="corps-conteneur">
+
+
+<div class="container-fluid">
+<div class="espaceur">
+       <div class="container">
         <form class="form-horizontal" role="form" method="POST" action="/login">
             <div class="row">
                 <div class="col-md-3"></div>
@@ -83,5 +101,17 @@
             </div>
         </form>
     </div>
+</div>
+</div>
+    
+</div>
+</div>
+</div>
+
+
+ <?php 
+ 
+ include('../inclusions/js.inc.php');
+ ?>
 </body>
 </html>

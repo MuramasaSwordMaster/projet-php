@@ -7,7 +7,7 @@
     <title>Accueil reseau</title>
     <?php 
      include('../inclusions/config.inc.php');
- include('../inclusions/head-content.inc.php');
+     include('../inclusions/head-content.inc.php');
  ?>
 
 <script type="text/javascript">
@@ -51,20 +51,20 @@
                 <div class="card card-body">
                     <h3 class="text-center mb-4">Inscription</h3>
                     <div class="alert alert-danger">
-                        <a class="close font-weight-light" data-dismiss="alert" href="#">�</a>Password is too short.
+                        <a class="close font-weight-light" data-dismiss="alert" href="#">�</a>Le mot de passe est trop court.
                     </div>
                     <fieldset>
                         <div class="form-group">                        
-                            <select id="cbStatut" onchange="cbStatutChange()" class="form-control input-lg">
+                            <select id="cbStatut" name="statut" onchange="cbStatutChange()" class="form-control input-lg">
                                 <option selected="selected" value="0">Vous êtes ?</option>
 								<option value="1">Enseignant</option>
                                 <option value="2">Etudiant</option>
                             </select>
                         </div>
                         <div class="form-group" id="divNiveaux">
-                            <input type="radio" name="rd" value="Classique"> Classique<br>
-                            <input type="radio" name="rd" value="Apprentissage"> Apprentissage<br>
-                                <select class="form-control input-lg">
+                            <input type="radio" name="mode" value="Classique"> Classique<br>
+                            <input type="radio" name="mode" value="Apprentissage"> Apprentissage<br>
+                                <select class="form-control input-lg" name="niveau">
                                     <option>Niveau</option>
                                     <option>L3</option>
                                     <option>M1</option>
@@ -72,20 +72,29 @@
                                 </select>
                         </div>
                         <div class="form-group has-error">
-                            <input class="form-control input-lg" placeholder="Nom" name="nom" type="text">
+                            <input required class="form-control input-lg" placeholder="Nom" name="nom" type="text">
                         </div>
                         <div class="form-group has-error">
                             <input class="form-control input-lg" placeholder="Prénom" name="prenom" type="text">
                         </div>
                         <div class="form-group has-error">
+                            <input class="form-control input-lg" placeholder="Numéro" name="num" type="text">
+                        </div>
+                        <div class="form-group has-error">
+                            <input class="form-control input-lg" placeholder="Adresse" name="adresse" type="text">
+                        </div>
+                        <div class="form-group has-error">
                             <input class="form-control input-lg" placeholder="Date de naissance" name="dateNaiss" type="text">
+                        </div>
+                        <div class="form-group has-error">
+                            <input class="form-control input-lg" placeholder="Adresse E-mail" name="email" type="text">
                         </div>
                         <div class="form-group has-success">
                             <input class="form-control input-lg" placeholder="Mot de passe" name="passe" value="" type="password">
                         </div>
                         <div class="form-group has-success">
                             <input class="form-control input-lg" placeholder="Confirmer mot de passe" name="passe2" value="" type="password">
-                        </div>
+                        </div> 
                         <input class="btn btn-lg btn-primary btn-block" value="S'inscrire" type="submit">
                     </fieldset>
                 </div>                

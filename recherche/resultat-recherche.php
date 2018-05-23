@@ -2,7 +2,6 @@
 
 include('../inclusions/db.inc.php') ; 
 
-
 ?>
 
 <!DOCTYPE html>

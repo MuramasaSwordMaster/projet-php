@@ -8,7 +8,8 @@
 
     <?php 
 include('../../inclusions/config.inc.php');
- include('../../inclusions/head-content.inc.php');
+include('../../inclusions/head-content.inc.php');
+
  ?>
  <style>
 
@@ -175,20 +176,11 @@ margin-top:10px;
                                
                                <?php 
                                
-                               
+                                include('generer-tab.php');
                                
                                    
                                 ?>
-                               <tr>
-                                 
-                              
-                                   <td><input type="checkbox" data-id='1' ></td>
-                                 <td>Lourou</td>
-                                 <td>Mohamed</td>
-                                 <td>Miage</td>
-                                  <td>L3</td>
-                                  <td>Apprenti</td>
-                               </tr>
+                            
                                <tr>
                               
                                    <td><input type="checkbox" data-id='2'></td>

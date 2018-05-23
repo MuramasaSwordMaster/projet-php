@@ -8,7 +8,8 @@
 
     <?php 
 include('../../inclusions/config.inc.php');
- include('../../inclusions/head-content.inc.php');
+include('../../inclusions/head-content.inc.php');
+
  ?>
  <style>
 
@@ -175,7 +176,7 @@ margin-top:10px;
                                
                                <?php 
                                
-                               
+                                include('generer-tab.php');
                                
                                    
                                 ?>

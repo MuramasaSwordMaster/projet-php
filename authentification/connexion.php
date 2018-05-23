@@ -32,7 +32,7 @@
 <div class="container-fluid">
 <div class="espaceur">
        <div class="container">
-        <form class="form-horizontal" role="form" method="POST" action="/login">
+        <form action="./traitement/traitement-conex.php" method="post">
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
@@ -68,7 +68,7 @@
                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                             <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
                             <input type="password" name="password" class="form-control" id="password"
-                                   placeholder="Password" required>
+                                   placeholder="Mot de passe" required>
                         </div>
                     </div>
                 </div>

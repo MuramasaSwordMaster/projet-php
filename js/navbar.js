@@ -10,6 +10,35 @@ el.css({
 })
 
 
+$(document).ready(function(){
+
+/*
+
+    // Autocomplete
+    $( "#search-box" ).autocomplete({
+      source: function( request, response ) {
+        $.ajax( {
+          url: "db/search.php",
+          dataType: "jsonp",
+          data: {
+            query: request.term
+          },
+          success: function( data ) {
+            response( data );
+          }
+        } );
+      },
+      minLength: 1,
+      select: function( event, ui ) {
+        log( "Selected: " + ui.item.value + " aka " + ui.item.id );
+      }
+    } );
+
+*/
+
+});
+
+
 
 $('body').append(el)
 var clique = false
@@ -31,6 +60,10 @@ $(document).click(function(e){
         el.hide()
         clique = false
     }
+
+    
+
+
 })
    el.find('li').click(function(e){
  

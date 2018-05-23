@@ -1,5 +1,11 @@
 
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
 /** using the open method to initialize the DB.*/
 class MyDB extends SQLite3
 {
@@ -16,6 +22,77 @@ class MyDB extends SQLite3
 function getDB($dossierDB){
 
     return new MyDB($dossierDB);
+
+}
+
+function importCSV($dossierDB,$csvFile,$withHeader = true){
+
+	// File structure : "Id_Pers";"Nom";"Prenom";"PWD";"Mail";"Date_Naissance";"Adresse";"Pic_scr";"Apropos"
+
+	// INIT
+	$cpt = 1;
+	$db = getDB($dossierDB);
+
+	// CHECK path
+	if(file_exists($csvFile)){
+
+		// OPEN
+		if (($handle = fopen($csvFile, "r")) !== FALSE) {
+
+			// GET Max index
+			$query = "select MAX(CAST(Id_Pers AS INT)) as last_id FROM Personne";
+			$result = $db->query($query);
+			$row = $result->fetchArray(SQLITE3_ASSOC);
+			$lastId = intval($row["last_id"]);
+			
+			// READ lines
+			while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
+
+				if(!$withHeader){
+
+					// CONTROL Structure
+					$num = count($data);
+					if($num == 9){
+
+						// BUILD Request
+						$req = "INSERT INTO Personne (Id_Pers,Nom,Prenom,PWD,Mail,Date_Naissance,Adresse,Pic_src,Apropos)";
+						$req .= " VALUES (";
+						$req .= ($lastId + $cpt) . ",";
+						$req .= '"' . $data[1] . '",';
+						$req .= '"' . $data[2] . '",';
+						$req .= '"' . $data[3] . '",';
+						$req .= '"' . $data[4] . '",';
+						$req .= '"' . $data[5] . '",';
+						$req .= '"' . $data[6] . '",';
+						$req .= '"' . $data[7] . '",';
+						$req .= '"' . $data[8] . '")';
+
+						// EXECUTE request
+						$result = $db->query($req);
+
+						// INCREMENT
+						$cpt++;
+
+					}
+
+				}else{
+					$withHeader = false;
+				}
+
+				
+				
+			}
+
+			// CLOSE
+			fclose($handle);
+
+		}
+
+	}else{
+
+		return false;
+	}
+
 
 }
 

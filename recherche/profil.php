@@ -1,3 +1,14 @@
+<?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
+include('../inclusions/db.inc.php') ; 
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,31 +36,48 @@
 
                     <div class="container-fluid">
                         <div class="espaceur">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="..." alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Cras justo odio</li>
-                                <li class="list-group-item">Dapibus ac facilisis in</li>
-                                <li class="list-group-item">Vestibulum at eros</li>
-                            </ul>
-                             <div class="card-body">
-                                <a href="#" class="card-link">Card link</a>
-                                <a href="#" class="card-link">Another link</a>
-                            </div>
+
+
+                            <?php
+
+
+                            // CHECK query parmeter
+                            if(isset($_GET["id"]) && !empty($_GET["id"])){
+
+                                // INIT
+                                $db = getDB('../db/');
+                                $id = $_GET["id"];
+                                $output = array();
+
+                                // BUILD QUery
+                                $query = "select * FROM Personne WHERE Id_Pers == '$id'";
+                                
+
+                                // EXEC query and browse results
+                                $result = $db->query($query);
+                                $row = $result->fetchArray(SQLITE3_ASSOC);
+
+                                    foreach($row as $key=>$value){
+                                         echo "<span style='font-weight:bold'>$key</span> : $value <br />" ;
+                                    }
+                                    
+                                
+                                
+
+                            }
+
+
+                            ?>
+
+
+
                         </div>
-                        </div>
-                        
                     </div>
     
             </div>
-            
         </div>
     </div>
-    
+
 
     <?php 
         include('../inclusions/js.inc.php');
